@@ -83,7 +83,9 @@ function ClientsCard() {
   }
 
   return (
-    <div>
+    <>
+   
+    <div className='relative overflow-x-auto'>
       <Modal
         open={modalOpen}
         title="Editar cliente"
@@ -199,6 +201,7 @@ function ClientsCard() {
 
       </table>
     </div>
+     </>
   )
 }
 
