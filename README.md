@@ -4,6 +4,10 @@ Projeto fullstack
 
 ## 🚀 Começando
 
+## 🚀Apresentação do projeto:
+https://www.youtube.com/watch?v=vp8ZpHF8XEo
+OBS: Na pagina de clients tbm é possivel deletar um cliente.
+
 <details>
   <summary><strong>👨‍💻 Tecnologias Utilizadas</strong></summary><br />
  
@@ -54,3 +58,4 @@ SECRET=0917B13A9091915D54B6336F45909539CCE452B3661B21F386418A257883B30A
 
 6 - Para rodar a aplicação web: Entre no diretório cd .\frontend\ e execute o comando "npm run dev"
 ```
+
