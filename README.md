@@ -8,7 +8,20 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
 
- <summary><strong>👨‍💻 O que deverá ser desenvolvido</strong></summary><br />
+<details>
+  <summary><strong>👨‍💻 Tecnologias Utilizadas</strong></summary><br />
+ 
+ * TypeScript
+ * Node.js com framework Express
+ * React.js
+ * MongoDB
+ * Tailwind CSS
+ * Material-UI
+ * Docker
+ 
+ 
+ <details/>
+
 
 ### 📋 Pré-requisitos
 
