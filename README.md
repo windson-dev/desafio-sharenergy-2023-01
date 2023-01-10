@@ -13,7 +13,7 @@ Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar 
  
  * TypeScript
  * Node.js com framework Express
- * React.js
+ * React.js: Context API, Hooks
  * MongoDB
  * Tailwind CSS
  * Material-UI
