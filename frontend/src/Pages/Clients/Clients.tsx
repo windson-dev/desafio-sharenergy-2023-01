@@ -58,80 +58,68 @@ function Clients() {
   return (
     <>
       <Header />
+      <div className='pl-5'>
       <form>
-        <h1 className='px-1'>Cadastrar cliente</h1>
-        <div className='flex'>
-          <div className='flex px-1'>
             <input
               type="text"
-              className='rounded-lg bg-gray-700 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none text-gray-400 py-2 '
+              className='mr-1 text-xs text-gray-900 uppercase dark:text-gray-400 my-2 py-2 px-5 border-solid border-2 rounded'
               placeholder="Nome"
               value={name}
               onChange={(e: any) => setName(e.target.value)}
             />
-          </div>
+          
+          
 
-          <div className='flex px-1'>
+          
+          <input
+            type="text"
+            className='mr-1 text-xs text-gray-900 uppercase dark:text-gray-400 my-2 py-2 px-5 border-solid border-2 rounded'
+            placeholder="Email"
+            value={email}
+            onChange={(e: any) => setEmail(e.target.value)}
+          />
+          
 
-            <input
-              type="text"
-              className='rounded-lg bg-gray-700 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none text-gray-400 py-2 '
-              placeholder="Email"
-              value={email}
-              onChange={(e: any) => setEmail(e.target.value)}
-            />
-          </div>
+          <input
+            type="text"
+            className='mr-1 text-xs text-gray-900 uppercase dark:text-gray-400 my-2 py-2 px-5 border-solid border-2 rounded'
+            placeholder="Telefone"
+            value={phone}
+            onChange={(e: any) => setPhone(e.target.value)}
+          />
 
-          <div className='flex px-1'>
+          <input
+            type="text"
+            className='mr-1 text-xs text-gray-900 uppercase dark:text-gray-400 my-2 py-2 px-5 border-solid border-2 rounded '
+            placeholder="Endereço"
+            value={address}
+            onChange={(e: any) => setAddress(e.target.value)}
+          />
 
-
-            <input
-              type="text"
-              className='rounded-lg bg-gray-700 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none text-gray-400 py-2 '
-              placeholder="Telefone"
-              value={phone}
-              onChange={(e: any) => setPhone(e.target.value)}
-            />
-          </div>
-
-          <div className='flex px-1'>
-            <input
-              type="text"
-              className='rounded-lg bg-gray-700 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none text-gray-400 py-2 '
-              placeholder="Endereço"
-              value={address}
-              onChange={(e: any) => setAddress(e.target.value)}
-            />
-          </div>
-
-          <div className='flex px-1'>
-            <input
-              type="text"
-              className='rounded-lg bg-gray-700 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none text-gray-400 py-2 '
-              placeholder="Cpf"
-              value={cpf}
-              onChange={(e: any) => setCpf(e.target.value)}
-            />
-          </div>
-
+          <input
+            type="text"
+            className='mr-1 text-xs text-gray-900 uppercase dark:text-gray-400 my-2 py-2 px-5 border-solid border-2 rounded'
+            placeholder="Cpf"
+            value={cpf}
+            onChange={(e: any) => setCpf(e.target.value)}
+          />
 
           <button
-            className='px-3 bg-teal-500 shadow-lg shadow-teal-500/50 hover:shadow-teal-500/40 text-white font-semibold rounded-lg'
+            className=' my-1 py-2 px-5 bg-teal-500 shadow-lg shadow-teal-500/50 hover:shadow-teal-500/40 text-white font-semibold rounded-lg'
             onClick={registerHandleClient}
           >
             Registrar cliente
           </button>
 
-
-
-        </div>
+         
 
       </form>
-
-
+      </div>
       <ClientsCard />
     </>
   )
 }
+
+
 
 export default Clients;

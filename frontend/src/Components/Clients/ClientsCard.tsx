@@ -39,7 +39,7 @@ function ClientsCard() {
       })
       message.success('Cliente deletado com sucesso');
 
-      setTimeout(function() {
+      setTimeout(function () {
         window.location.reload();
       }, 500);
 
@@ -58,7 +58,7 @@ function ClientsCard() {
 
       message.success('Cliente atualizado com sucesso!');
 
-      setTimeout(function() {
+      setTimeout(function () {
         window.location.reload();
       }, 500);
 
@@ -115,91 +115,89 @@ function ClientsCard() {
           </Form>
         )}
       </Modal>
-      <div className="overflow-x-auto">
-        <div className="p-1.5 w-full inline-block align-middle ">
-          <div className="overflow-hidden border rounded-lg">
-            <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                  >
-                    Nome
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                  >
-                    Email
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                  >
-                    Phone
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                  >
-                    Endereço
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                  >
-                    Cpf
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-xs font-bold text-right text-gray-500 uppercase "
-                  >
-                    Edit
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-xs font-bold text-right text-gray-500 uppercase "
-                  >
-                    Delete
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                {(loading ? (<h1>Carregando...</h1>) : clientsData.map((client: any) => (
-                  <tr key={client._id}>
-                    <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
-                      <h1>{client.name}</h1>
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">{`${client.email}`}</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">{client.phone}</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">{client.address}</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">{client.cpf}</td>
-                    <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
 
-                      <button
-                        className="text-green-500 hover:text-green-700"
-                        onClick={() => handleEdit(client._id)}
-                      >
-                        Edit
-                      </button>
+      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead className="text-xs text-gray-900 uppercase dark:text-gray-400">
+          <tr>
+            <th
 
-                    </td>
-                    <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
-                      <button
-                        className="text-red-500 hover:text-red-700"
-                        onClick={() => deleteClient(client._id)}
-                      >
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                )))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
+              scope="col" className="px-6 py-3"
+            >
+              Nome
+            </th>
+            <th
+
+              scope="col" className="px-6 py-3"
+            >
+              Email
+            </th>
+            <th
+
+              scope="col" className="px-6 py-3"
+            >
+              Phone
+            </th>
+            <th
+
+              scope="col" className="px-6 py-3"
+            >
+              Endereço
+            </th>
+            <th
+
+              scope="col" className="px-6 py-3"
+            >
+              Cpf
+            </th>
+            <th
+              scope="col"
+              className="px-6 py-3 text-xs font-bold text-right text-gray-500 uppercase "
+            >
+              Edit
+            </th>
+            <th
+              scope="col"
+              className="px-6 py-3 text-xs font-bold text-right text-gray-500 uppercase "
+            >
+              Delete
+            </th>
+          </tr>
+        </thead>
+
+        {(loading ? (<h1>Carregando...</h1>) : clientsData.map((client: any) => (
+          <tbody>
+            <tr className="bg-white" key={client._id}>
+              <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                <h1>{client.name}</h1>
+              </th>
+              <td className="px-6 py-4 font-medium text-gray-900">{`${client.email}`}</td>
+              <td className="px-6 py-4 font-medium text-gray-900">{client.phone}</td>
+              <td className="px-6 py-4 font-medium text-gray-900">{client.address}</td>
+              <td className="px-6 py-4 font-medium text-gray-900">{client.cpf}</td>
+
+              <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
+                <button
+                  className="text-green-500 hover:text-green-700"
+                  onClick={() => handleEdit(client._id)}
+                >
+                  Edit
+                </button>
+              </td>
+
+              <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
+                <button
+                  className="text-red-500 hover:text-red-700"
+                  onClick={() => deleteClient(client._id)}
+                >
+                  Delete
+                </button>
+              </td>
+
+            </tr>
+          </tbody>
+        )))}
+
+      </table>
     </div>
   )
 }

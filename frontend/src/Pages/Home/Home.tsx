@@ -51,9 +51,11 @@ function Home() {
   return (
     <>
       <Header />
-      <div className="overflow-x-auto bg-gray-900">
+
+      <div className="relative overflow-x-auto ">
+      <div className="overflow-x-auto  ">
         <div className="py-3 pl-2">
-          <div className="relative max-w-xs">
+          <div className="relative max-w-xs ">
             <label htmlFor="hs-table-search" className="sr-only">
               Search
             </label>
@@ -65,6 +67,7 @@ function Home() {
               placeholder="Search..."
               onChange={handleSearch}
             />
+            
             <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
               <svg
                 className="h-3.5 w-3.5 text-gray-400"
@@ -80,68 +83,47 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col">
-        <div className='space-x-1'>
-          <Pagination count={totalPages} page={currentPage} onChange={handlePageChange} />
-        </div>
-        <div className="overflow-x-auto">
-          <div className="p-1.5 w-full inline-block align-middle ">
-            <div className="overflow-hidden border rounded-lg">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th
-                      scope="col"
-                      className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                    >
-                      Image
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                    >
-                      Fullname
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                    >
-                      Username
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                    >
-                      age
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                    >
-                      Email
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  {loading ? (<p>loading</p>) : (currentPageData.map((item: any) => (
-                    <tr key={item.email}>
-                      <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap"><img src={item.picture.large} alt={`${item.name.first} ${item.name.last}`} /></td>
-                      <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">{`${item.name.first} ${item.name.last}`}</td>
-                      <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">{item.login.username}</td>
-                      <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">{item.dob.age}</td>
-                      <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">{item.email}</td>
-                    </tr>
-                  )))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
+
+      
+        <Pagination className='flex justify-center' count={totalPages} page={currentPage} onChange={handlePageChange} />
+
+        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+          <thead className="text-xs text-gray-900 uppercase dark:text-gray-400">
+            <tr>
+              <th scope="col" className="px-6 py-3">
+                Foto
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Nome Completo
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Nome de Usuário
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Age
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Email
+              </th>
+            </tr>
+          </thead>
+          {loading ? (<p>loading</p>) : (currentPageData.map((item: any) => (
+            <tbody>
+              <tr className="bg-white dark:bg-gray-800" key={item.email}>
+                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  <img src={item.picture.large} alt={`${item.name.first} ${item.name.last}`} />
+                </th>
+                <td className="px-6 py-4">{`${item.name.first} ${item.name.last}`}</td>
+                <td className="px-6 py-4">{item.login.username}</td>
+                <td className="px-6 py-4">{item.dob.age}</td>
+                <td className="px-6 py-4">{item.email}</td>
+              </tr>
+            </tbody>
+          )))}
+        </table>
       </div>
     </>
   )
 }
 
-export default Home
+export default Home;
