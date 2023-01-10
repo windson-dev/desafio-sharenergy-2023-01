@@ -41,10 +41,14 @@ Uma série de exemplos passo-a-passo que informam o que você deve executar para
 
 ```
 1 - Instale as dependências (npm install)
+
 2 - Entre no diretorio do backend: "cd .\backend\"
+
 3 - Rode os serviços shareenergy e shareenergy_db com o comando "docker-compose up -d"
+
 4 - Entre no container docker para rodar a aplicação backend: "docker exec -it shareenergy bash" e execute o comando "npm run dev" apos isso,
 instale as dependências dentro do container docker (npm install)
+
 5 - configure as duas variaveis de ambiente em um arquivo .env:
 SHAREENERGY_PASSWORD=sh@r3n3rgy
 SECRET=0917B13A9091915D54B6336F45909539CCE452B3661B21F386418A257883B30A
