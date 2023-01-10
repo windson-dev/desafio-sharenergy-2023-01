@@ -36,7 +36,7 @@ function Login() {
 
       navigate('/home');
     } catch (error) {
-      message.error('Username ou senha inválidos.');
+      message.error('usuário ou senha inválidos.');
     }
   }
 
