@@ -27,7 +27,6 @@ Apos clonar o repositório: Entre na branch "Windson-Donizeti-Macedo"
 
 Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
 
-Diga como essa etapa será:
 
 ```
 1 - Instale as dependências (npm install)
