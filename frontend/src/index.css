@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  --background-color: red;
+  --primary-color: #008cfe;
+  --hr-color: #c4c4c4;
+  --font-family: "Exo", sans-serif;
+}
