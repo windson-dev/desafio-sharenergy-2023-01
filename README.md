@@ -2,8 +2,6 @@
 
 Projeto fullstack
 
-## 🚀 Começando
-
 ## 🚀Apresentação do projeto:
 https://www.youtube.com/watch?v=vp8ZpHF8XEo
 OBS: Na pagina de clients tbm é possivel deletar um cliente.
