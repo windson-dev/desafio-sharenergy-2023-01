@@ -87,6 +87,6 @@ Esperamos de você duas entregas: o código no GitHub e um vídeo explicativo no
 - Faça um vídeo que explique o que você fez no desafio, com duração aproximada de 5 minutos. A facecam é opcional, mas bem-vinda. O vídeo deve ser postado no YouTube (pode deixar como não listado) e seu link deve ser colocado no README.md.
 - Ao finalizar o desafio, faça um pull request de sua branch para esse repositório.
 
-### Prazo limite de entrega
+### Prazo limite de entrega.
 
 O pull request com sua solução do desafio deve ser feito até a data especificada no corpo do email que você recebeu com a descrição do desafio.
